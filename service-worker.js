@@ -1,4 +1,4 @@
-const CACHE_NAME = 'presentOS-pwa-cache-v2';
+const CACHE_NAME = 'presentos-pwa-cache-v2';
 const urlsToCache = [
     '/presentos/',
     '/presentos/index.html',
