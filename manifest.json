@@ -1,6 +1,6 @@
 {
-    "name": "presentOS",
-    "short_name": "presentOS",
+    "name": "presentos",
+    "short_name": "presentos",
     "description": "v3",
     "start_url": "/presentos/",
     "scope": "/presentos/",
