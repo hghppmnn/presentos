@@ -30,6 +30,23 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#000000">
     <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="presentos">
+    <meta property="og:title" content="presentos">
+    <meta property="og:description" content="v3">
+    <meta property="og:image" content="/presentos/social-preview.png">
+    <meta property="og:url" content="https://www.present.zone/os/start">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="presentos">
+    <meta name="twitter:description" content="v3">
+    <meta name="twitter:image" content="/presentos/social-preview.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" sizes="192x192" href="/presentos/icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/presentos/icon-512x512.png">
+    <link rel="apple-touch-icon" href="/presentos/icon-192x192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="presentOS">
     <meta property="og:title" content="presentOS">
     <meta property="og:description" content="v3">
@@ -47,6 +64,32 @@
             overflow: hidden; 
             background-color: #000000; 
         }
+        iframe { 
+            width: 100lvw; 
+            height: 100dvh; 
+            border: none; 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            bottom: 0; 
+        }
+        
+        /* Full Screen Mode (Redpills style) */
+        @supports (-webkit-touch-callout: none) {
+            @media not all and (display-mode: standalone) {
+                iframe { height: 100dvh; }
+            }
+        }
+        @supports (-webkit-touch-callout: none) {
+            html, body, iframe {
+                height: 100vh !important;
+                max-height: 100vh !important;
+                min-height: 100vh !important;
+                overflow: hidden !important;
+            }
+        }
+        
         iframe { 
             width: 100lvw; 
             height: 100lvh; 
@@ -162,7 +205,7 @@
         document.documentElement.style.setProperty('--dvh', window.innerHeight + 'px');
     }
 
-    if ('lvh' === 'dvh') {
+    if ('dvh' === 'dvh') {
         // Set initial value
         updateViewportHeight();
         
